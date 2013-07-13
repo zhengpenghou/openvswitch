@@ -11,7 +11,7 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=openvswitch
 
 PKG_RELEASE:=1
-PKG_VERSION:=1.9.0
+PKG_VERSION:=1.10.0
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=http://openvswitch.org/releases/
@@ -114,7 +114,7 @@ define KernelPackage/openvswitch
   FILES:= \
 	$(PKG_BUILD_DIR)/datapath/linux/brcompat.$(LINUX_KMOD_SUFFIX) \
 	$(PKG_BUILD_DIR)/datapath/linux/openvswitch.$(LINUX_KMOD_SUFFIX)
-  AUTOLOAD:=$(call AutoLoad,21,openvswitch brcompat)
+  AUTOLOAD:=$(call AutoLoad,21,openvswitch)
 endef
 
 define KernelPackage/openvswitch/description
