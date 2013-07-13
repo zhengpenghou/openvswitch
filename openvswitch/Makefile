@@ -194,7 +194,7 @@ endef
 
 define Package/openvswitch-brcompat/install
 	$(INSTALL_DIR) $(1)/usr/sbin/
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/vswitchd/ovs-brcompatd $(1)/usr/sbin/
+#	$(INSTALL_BIN) $(PKG_BUILD_DIR)/vswitchd/ovs-brcompatd $(1)/usr/sbin/
 endef
 
 $(eval $(call BuildPackage,openvswitch-ipsec))
