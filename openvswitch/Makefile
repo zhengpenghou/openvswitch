@@ -112,7 +112,6 @@ define KernelPackage/openvswitch
   KCONFIG:=CONFIG_BRIDGE
   DEPENDS:=+kmod-stp +kmod-ipv6
   FILES:= \
-	$(PKG_BUILD_DIR)/datapath/linux/brcompat.$(LINUX_KMOD_SUFFIX) \
 	$(PKG_BUILD_DIR)/datapath/linux/openvswitch.$(LINUX_KMOD_SUFFIX)
   AUTOLOAD:=$(call AutoLoad,21,openvswitch)
 endef
